@@ -20,9 +20,6 @@ RUN gunzip -c /tmp/s6-overlay-${architecture}.tar.gz | tar -xf - -C /
 # Copy local files
 COPY root/ /
 
-RUN chmod +x /thumbnails.sh && \
-    chmod +x /thumbnails-monitor.sh
-
 VOLUME [ "/db", "/media" ]
 
 EXPOSE 8200 1900/udp
